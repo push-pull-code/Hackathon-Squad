@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include "greedy.h"
+typedef long long ll;
+using namespace std;
+
+int main(){
+    ll n,m;cin>>n>>m;
+    vector<pair<ll,ll>> skill; // it is zero index but person 1 to n;
+    vector<vector<ll>> conflict(n+1,vector<ll> ());
+    for(ll i=1;i<=n;i++){
+        ll x;cin>>x;
+        skill.push_back({x,i});
+    }
+    for(ll i=1;i<=m;i++){ // take care of empty vector
+        ll x,y;cin>>x>>y;
+        conflict[x].push_back(y);
+        conflict[y].push_back(x);
+    } 
+    //greedy approach section
+    ll ans_greedy=greedy(skill,conflict); // skill is sort in decreased
+
+}
