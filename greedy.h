@@ -1,4 +1,6 @@
+#pragma once 
 #include <vector>
+#include <algorithm>
 typedef long long ll;
 using namespace std;
 vector<bool> visited;
@@ -19,6 +21,7 @@ vector<ll> greedy(vector<pair<ll,ll>> &skill,vector<vector<ll>> &conflict){
         ll person=skill[i].second;
         if(!visited[person]){
             ans+=s;
+            // cout<<person<<endl;
             ans_skill.push_back(person);
             visit(person,conflict);
         }
