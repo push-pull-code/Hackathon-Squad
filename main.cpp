@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include "greedy.h"
 #include "P&L.h"
+#include "blocked.h"
 typedef long long ll;
 using namespace std;
 //checking answer
@@ -34,5 +35,11 @@ int main(){
         mpskill[x.second]=x.first;
     }
     indics_skill.push_back(pl(skill,conflict,mpskill));
-
+    // i have skill(sorted),map of skill (mpskill),conflict
+    //blocked approach
+    indics_skill.push_back(block(skill,conflict,mpskill));
+    for(auto &x:indics_skill){
+    for(auto &y:x)cout<<y<<" ";
+    cout<<endl;
+    }
 }

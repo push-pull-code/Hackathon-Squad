@@ -6,27 +6,6 @@ input format
 u!=v
 all pair distinct
 
-input for test
-{
-5 4
-100 40 40 40 40
-1 2
-1 3
-1 4
-1 5
-//
-3 2
-100 60 60
-1 2
-1 3
-//
-6 2
-10 20 30 40 50 60
-1 2
-5 6
-//
-
-}
 output formate
 sum of skill rating
 indics of selected coder(ascending order)
@@ -52,3 +31,8 @@ but there is one loop hole ,it failed on 2nd test case.
 1 2
 1 3
 solution should be no of blocking && plskill points = no of blocks* plskill points (of equal then less no of blocks consider);//abhi impliment nhi kiya hai
+but again if pskill is positive then it will be a problem , higher blocked will be choosen in this process.
+I have to think other things.
+I can go by skill/(1+no of blocked);
+then select higher skils point
+//
