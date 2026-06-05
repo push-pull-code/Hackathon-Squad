@@ -1,0 +1,6 @@
+*.exe
+large_input.txt
+large_output.txt
+test_100k.txt
+main_timed.cpp
+__pycache__/
